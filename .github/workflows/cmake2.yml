@@ -58,7 +58,7 @@ jobs:
         id: build-rpms
         run: |
           cat  /etc/os-release
-          sh create-rpm-package.sh
+          sh create-deb-package.sh
           #mv install.tar.gz openeuler-${{ matrix.release }}-${{ matrix.arch }}-wsl-rootfs.tar.gz
       #- name: Upload artifact
       #  uses: actions/upload-artifact@v3
