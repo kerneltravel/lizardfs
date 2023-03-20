@@ -56,6 +56,7 @@ jobs:
       - name: build wsl install.tar.gz
         id: build-rpms
         run: |
+          cat  /etc/os-release
           sh create-rpm-package.sh
           #mv install.tar.gz openeuler-${{ matrix.release }}-${{ matrix.arch }}-wsl-rootfs.tar.gz
       #- name: Upload artifact
