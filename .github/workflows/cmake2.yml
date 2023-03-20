@@ -13,7 +13,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{github.repository_owner}}/openeuler_wsl_rootfs
+  IMAGE_NAME: openeuler/openeuler
 
 
 jobs:
@@ -28,8 +28,9 @@ jobs:
       id-token: write
     strategy:
       matrix:
-        arch: [x86_64, aarch64]
-        release: [22.03, 20.03, 22.09]
+        #arch: [x86_64, aarch64]
+        arch: [x86_64]
+        release: [22.03]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
